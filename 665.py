@@ -1,3 +1,7 @@
+from typing import List
+from itertools import pairwise
+
+
 class Solution:
     def checkPossibility(self, nums: List[int]) -> bool:
         # Sample Solution
@@ -14,7 +18,6 @@ class Solution:
         # My Solution
         def is_sorted(nums: List[int]) -> bool:
             return all(a <= b for a, b in pairwise(nums))
-
 
         length = len(nums)
         for i in range(length - 1):

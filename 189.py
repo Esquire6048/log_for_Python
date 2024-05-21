@@ -27,6 +27,7 @@ class Solution:
         length = len(nums)
         new_nums = [0] * length
         k = k % length
+        
         for i in range(length):
             new_nums[i] = nums[(i + length - k) % length]
         for i in range(length):

@@ -16,6 +16,7 @@ class Solution:
         # My Solution
         i = 0
         length = len(nums)
+        
         for j in range(length):
             if nums[j] != 0:
                 nums[i], nums[j] = nums[j], nums[i]

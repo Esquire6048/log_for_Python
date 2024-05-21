@@ -17,10 +17,12 @@ class Solution:
     def maxRotateFunction(self, nums: List[int]) -> int:
         n = len(nums)
         temp_sum = 0
+        
         for i in range(n):
             temp_sum += i * nums[i]
         max_sum = temp_sum
         nums_sum = sum(nums)
+
         for i in range(n):
             temp_sum = temp_sum + nums_sum - n * nums[n - 1 - i]
             max_sum = max(temp_sum, max_sum)

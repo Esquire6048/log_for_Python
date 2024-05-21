@@ -25,6 +25,7 @@ class Solution:
                 x = nums[i]
             else:
                 visited[nums[i]] = True
+        
         for i in range(1, n + 1):
             if not visited[i]:
                 y = i

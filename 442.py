@@ -15,6 +15,7 @@ class Solution:
         # My Solution
         n = len(nums)
         s = []
+        
         for i in range(n):
             num = abs(nums[i]) - 1
             if nums[num] > 0:

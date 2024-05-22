@@ -15,8 +15,10 @@ class Solution:
         n = len(nums)
         cnt = [0] * n
         miss = []
+
         for num in nums:
             cnt[num - 1] = 1
+        
         for i in range(n):
             if cnt(i) == 0:
                 miss.append(i + 1)

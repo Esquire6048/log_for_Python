@@ -4,6 +4,8 @@ from itertools import pairwise
 
 class Solution:
     def checkPossibility(self, nums: List[int]) -> bool:
+
+
         # Sample Solution
         count = 0
         for i in range(1, len(nums)):
@@ -14,6 +16,7 @@ class Solution:
                     nums[i] = nums[i - 1]
                 count += 1
         return True
+
 
         # My Solution
         def is_sorted(nums: List[int]) -> bool:

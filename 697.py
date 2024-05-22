@@ -4,8 +4,11 @@ from collections import defaultdict
 
 class Solution:
     def findShortestSubArray(self, nums: List[int]) -> int:
+
+
         #Sample Solution
         # user a dictionary to record the appearance of a number
+        
         loc = defaultdict(list)
         for i, num in enumerate(nums):
             loc[num].append(i)
@@ -20,6 +23,7 @@ class Solution:
                 res = min(res, l[-1] - l[0] + 1)
 
         return res
+
 
         #My Solution
         n = len(nums)

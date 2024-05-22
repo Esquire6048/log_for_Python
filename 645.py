@@ -3,8 +3,10 @@ from collections import Counter
 
 
 class Solution:
-    # Sample Solution
     def findErrorNums(self, nums: List[int]) -> List[int]:
+
+
+        # Sample Solution
         cnt = Counter(nums)
         n = len(nums)
         ans = [0] * 2
@@ -15,8 +17,8 @@ class Solution:
                 ans[1] = x
         return ans
 
-    # My Solution
-    def findErrorNums(self, nums: List[int]) -> List[int]:
+
+        # My Solution
         n = len(nums)
         visited = [False] * (n + 1)
         x = y = 0

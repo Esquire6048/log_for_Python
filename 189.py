@@ -7,11 +7,13 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
 
-        # Sample Solution
+
+        # Sample Solution 1
         k %= len(nums)
         nums[:] = nums[-k:] + nums[:-k]
 
-        # Sample Solution
+
+        # Sample Solution 2
         def reverse(i: int, j: int):
             while i < j:
                 nums[i], nums[j] = nums[j], nums[i]
@@ -22,6 +24,7 @@ class Solution:
         reverse(0, n - 1)
         reverse(0, k - 1)
         reverse(k, n - 1)
+
 
         # My Base Solution
         length = len(nums)

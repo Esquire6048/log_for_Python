@@ -2,11 +2,9 @@ from typing import List
 from itertools import pairwise
 
 
+# Sample Solution
 class Solution:
     def checkPossibility(self, nums: List[int]) -> bool:
-
-
-        # Sample Solution
         count = 0
         for i in range(1, len(nums)):
             if nums[i - 1] > nums[i]:
@@ -18,7 +16,9 @@ class Solution:
         return True
 
 
-        # My Solution
+# My Solution
+class Solution:
+    def checkPossibility(self, nums: List[int]) -> bool:
         def is_sorted(nums: List[int]) -> bool:
             return all(a <= b for a, b in pairwise(nums))
 

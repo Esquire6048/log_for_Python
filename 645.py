@@ -2,11 +2,9 @@ from typing import List
 from collections import Counter
 
 
+# Sample Solution
 class Solution:
     def findErrorNums(self, nums: List[int]) -> List[int]:
-
-
-        # Sample Solution
         cnt = Counter(nums)
         n = len(nums)
         ans = [0] * 2
@@ -18,16 +16,19 @@ class Solution:
         return ans
 
 
-        # My Solution
+# My Solution
+class Solution:
+    def findErrorNums(self, nums: List[int]) -> List[int]:
         n = len(nums)
         visited = [False] * (n + 1)
         x = y = 0
+
         for i in range(0, n):
             if visited[nums[i]]:
                 x = nums[i]
             else:
                 visited[nums[i]] = True
-        
+
         for i in range(1, n + 1):
             if not visited[i]:
                 y = i

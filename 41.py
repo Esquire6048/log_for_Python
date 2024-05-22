@@ -1,11 +1,9 @@
 from typing import List
 
 
+# Sample Solution
 class Solution:
     def firstMissingPositive(self, nums: List[int]) -> int:
-        
-        
-        # Sample Solution
         def swap(i, j):
             nums[i], nums[j] = nums[j], nums[i]
 
@@ -19,9 +17,10 @@ class Solution:
         return n + 1
 
 
-        #My Solution
+# My Solution
+class Solution:
+    def firstMissingPositive(self, nums: List[int]) -> int:
         n = len(nums)
-
         isone = False
 
         for i in range(n):
@@ -31,12 +30,12 @@ class Solution:
                 isone = True
         if not isone:
             return 1
-            
+
         for i in range(n):
             if nums[i] != 0:
                 num = abs(nums[i]) - 1
                 if nums[num] > 0:
-                    nums[num] = - nums[num]
+                    nums[num] = -nums[num]
                 elif nums[num] == 0:
                     nums[num] = -1
 

@@ -1,19 +1,9 @@
 from typing import List
 
 
+# Sample Solution
 class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
-
-
-        # Sample Solution 1
-        k %= len(nums)
-        nums[:] = nums[-k:] + nums[:-k]
-
-
-        # Sample Solution 2
         def reverse(i: int, j: int):
             while i < j:
                 nums[i], nums[j] = nums[j], nums[i]
@@ -26,11 +16,13 @@ class Solution:
         reverse(k, n - 1)
 
 
-        # My Base Solution
+# My Solution
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
         length = len(nums)
         new_nums = [0] * length
         k = k % length
-        
+
         for i in range(length):
             new_nums[i] = nums[(i + length - k) % length]
         for i in range(length):

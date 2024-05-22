@@ -1,11 +1,9 @@
 from typing import List
 
 
+# Sample Solution
 class Solution:
     def maxRotateFunction(self, nums: List[int]) -> int:
-
-        
-        # Sample Solution
         f = sum(i * v for i, v in enumerate(nums))
         n, s = len(nums), sum(nums)
         ans = f
@@ -15,10 +13,12 @@ class Solution:
         return ans
 
 
-        # My Solution
+# My Solution
+class Solution:
+    def maxRotateFunction(self, nums: List[int]) -> int:
         n = len(nums)
         temp_sum = 0
-        
+
         for i in range(n):
             temp_sum += i * nums[i]
         max_sum = temp_sum

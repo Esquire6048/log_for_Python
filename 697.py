@@ -2,17 +2,14 @@ from typing import List
 from collections import defaultdict
 
 
+# Sample Solution
+# user a dictionary to record the appearance of a number
 class Solution:
     def findShortestSubArray(self, nums: List[int]) -> int:
-
-
-        #Sample Solution
-        # user a dictionary to record the appearance of a number
-        
         loc = defaultdict(list)
         for i, num in enumerate(nums):
             loc[num].append(i)
-        
+
         max_freq = max([len(l) for num, l in loc.items()])
 
         if max_freq == 1:
@@ -25,7 +22,9 @@ class Solution:
         return res
 
 
-        #My Solution
+# My Solution
+class Solution:
+    def findShortestSubArray(self, nums: List[int]) -> int:
         n = len(nums)
         cnt = [0] * 50000
         e = [0] * 50000
